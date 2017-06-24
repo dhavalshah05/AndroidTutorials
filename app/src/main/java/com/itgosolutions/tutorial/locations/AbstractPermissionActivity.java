@@ -91,4 +91,6 @@ abstract public class AbstractPermissionActivity extends AppCompatActivity {
 
         return(result.toArray(new String[result.size()]));
     }
+
+
 }
