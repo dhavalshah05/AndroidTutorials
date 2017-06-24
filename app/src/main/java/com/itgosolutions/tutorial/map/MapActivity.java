@@ -31,6 +31,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         /*
+        * For zooming to particular location with animation
+
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLng(new LatLng(40.76793169992044, -73.98180484771729));
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
 
