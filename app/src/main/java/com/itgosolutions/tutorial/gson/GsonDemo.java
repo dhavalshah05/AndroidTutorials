@@ -10,9 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created for testing purposes only
- */
 public class GsonDemo {
 
     public static void main(String[] args) {
