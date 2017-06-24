@@ -32,14 +32,16 @@
 
         <activity android:name=".permissions.PermissionActivity" />
         <activity android:name=".map.MapActivity" />
-        <activity android:name=".broadcast.BroadcastActivity" />
-
-        <activity android:name=".locations.LocationActivity">
+        <activity android:name=".broadcast.BroadcastActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".locations.LocationActivity">
+
         </activity>
 
         <receiver android:name=".locations.LocationBroadcast" />
