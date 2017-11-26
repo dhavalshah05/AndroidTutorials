@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itgosolutions.tutorial.google_login.FragmentGoogleUserDetails">
+
+    <TextView
+        android:id="@+id/fragment_google_user_details_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_google_user_details_tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_below="@id/fragment_google_user_details_tv_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/fragment_google_user_details_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:layout_below="@id/fragment_google_user_details_tv_email"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <Button
+        android:id="@+id/fragment_google_user_details_btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        />
+
+</RelativeLayout>
