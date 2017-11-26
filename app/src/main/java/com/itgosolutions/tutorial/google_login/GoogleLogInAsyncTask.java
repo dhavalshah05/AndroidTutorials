@@ -49,7 +49,7 @@ class GoogleLogInAsyncTask extends AsyncTask<Void, Void, String> {
 
         RequestBody formBody = RequestBody.create(JSON, gson.toJson(map));
         Request request = new Request.Builder()
-                .header("idToken", mIdToken + "dummy")
+                .header("idToken", mIdToken)
                 .url(mURL)
                 .post(formBody)
                 .build();
