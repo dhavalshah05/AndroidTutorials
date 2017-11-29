@@ -9,7 +9,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/google_sign_in_button"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        />
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="Working demo of \n Google SignIn with Node.js"
+        android:textSize="22sp" />
 
 </RelativeLayout>
