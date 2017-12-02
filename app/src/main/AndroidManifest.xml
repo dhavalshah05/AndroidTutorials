@@ -29,12 +29,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name=".permissions.PermissionActivity" />
         <activity android:name=".map.MapActivity" />
-        <activity android:name=".broadcast.BroadcastActivity"/>
-        <activity android:name=".locations.LocationActivity"/>
+        <activity android:name=".broadcast.BroadcastActivity" />
+        <activity android:name=".locations.LocationActivity" />
         <activity android:name=".google_login.ActivityGoogleLogin">
+        </activity>
+        <activity android:name=".webview_html.ActivityWebView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
