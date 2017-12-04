@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.itgosolutions.tutorial.webview_html.ActivityWebView">
+    tools:context="com.itgosolutions.tutorial.webview_html.FragmentWebView">
 
     <WebView
-        android:id="@+id/activity_web_view_web_view"
+        android:id="@+id/fragment_web_view_web_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

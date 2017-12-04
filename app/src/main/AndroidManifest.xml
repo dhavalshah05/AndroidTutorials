@@ -29,19 +29,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".permissions.PermissionActivity" />
-        <activity android:name=".map.MapActivity" />
-        <activity android:name=".broadcast.BroadcastActivity" />
-        <activity android:name=".locations.LocationActivity" />
-        <activity android:name=".google_login.ActivityGoogleLogin">
-        </activity>
-        <activity android:name=".webview_html.ActivityWebView">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".permissions.PermissionActivity" />
+        <activity android:name=".broadcast.BroadcastActivity" />
+        <activity android:name=".locations.LocationActivity" />
+        <activity android:name=".google_login.ActivityGoogleLogin"/>
 
         <receiver android:name=".locations.LocationBroadcast" />
 

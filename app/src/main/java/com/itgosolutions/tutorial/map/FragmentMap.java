@@ -1,7 +1,12 @@
 package com.itgosolutions.tutorial.map;
 
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,17 +19,28 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.itgosolutions.tutorial.R;
 
-public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class FragmentMap extends Fragment implements OnMapReadyCallback {
 
     private LatLngBounds.Builder builder = new LatLngBounds.Builder();
 
+    public static FragmentMap newInstance() {
+        
+        Bundle args = new Bundle();
+        
+        FragmentMap fragment = new FragmentMap();
+        fragment.setArguments(args);
+        return fragment;
+    }
+    
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_map, container, false);
+    }
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -65,7 +81,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         builder.include(marker3.getPosition());
         builder.include(marker4.getPosition());
 
-        findViewById(android.R.id.content).post(new Runnable() {
+        getActivity().findViewById(android.R.id.content).post(new Runnable() {
             @Override
             public void run() {
                CameraUpdate allMarkers = CameraUpdateFactory.newLatLngBounds(builder.build(), 32);
