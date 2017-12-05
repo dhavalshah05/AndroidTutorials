@@ -5,15 +5,17 @@ import android.os.AsyncTask;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 
 class GoogleLogInAsyncTask extends AsyncTask<Void, Void, String> {
@@ -57,7 +59,7 @@ class GoogleLogInAsyncTask extends AsyncTask<Void, Void, String> {
         try {
             Response response = client.newCall(request).execute();
             return response.body().string();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
