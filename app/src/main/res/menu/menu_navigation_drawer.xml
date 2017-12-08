@@ -6,6 +6,11 @@
         android:checkableBehavior="single">
 
         <item
+            android:id="@+id/nav_google_login"
+            android:icon="@drawable/ic_home"
+            android:title="Google SignIn" />
+
+        <item
             android:id="@+id/nav_invoice_view"
             android:icon="@drawable/ic_home"
             android:title="Invoice View" />

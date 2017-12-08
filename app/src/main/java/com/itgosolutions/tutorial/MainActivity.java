@@ -1,5 +1,6 @@
 package com.itgosolutions.tutorial;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.itgosolutions.tutorial.google_login.ActivityGoogleLogin;
 import com.itgosolutions.tutorial.map.FragmentMap;
 import com.itgosolutions.tutorial.rxjava.FragmentRxJava;
 import com.itgosolutions.tutorial.webview_html.FragmentWebView;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initNavigationMenu(){
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setItemTextAppearance(R.style.TextLight);
+        navigationView.setItemTextAppearance(R.style.AppTextMediumLight);
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -66,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Fragment fragment;
                 switch (item.getItemId()){
+                    case R.id.nav_google_login:
+                        startActivityGoogleLogin();
+                        break;
                     case R.id.nav_invoice_view:
                         fragment = FragmentWebView.newInstance();
                         addFragment(R.id.activity_main_content_frame, fragment);
@@ -78,16 +83,20 @@ public class MainActivity extends AppCompatActivity {
                         fragment = FragmentRxJava.newInstance();
                         addFragment(R.id.activity_main_content_frame, fragment);
                         break;
-                    default:
-                        fragment = FragmentWebView.newInstance();
-                        addFragment(R.id.activity_main_content_frame, fragment);
-                        break;
+//                    default:
+//                        fragment = FragmentWebView.newInstance();
+//                        addFragment(R.id.activity_main_content_frame, fragment);
+//                        break;
                 }
                 return true;
             }
         });
 
         drawerLayout.openDrawer(GravityCompat.START);
+    }
+
+    private void startActivityGoogleLogin() {
+        startActivity(new Intent(this, ActivityGoogleLogin.class));
     }
 
     private void addFragment(int containerId, Fragment fragment){
