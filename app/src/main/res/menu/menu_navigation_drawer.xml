@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_invoice_view"
+            android:icon="@drawable/ic_home"
+            android:title="Invoice View" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_home"
+            android:title="Map" />
+
+        <item
+            android:id="@+id/nav_rx_java"
+            android:icon="@drawable/ic_home"
+            android:title="RxJava" />
+
+    </group>
+
+</menu>

@@ -1,9 +1,8 @@
 package com.itgosolutions.tutorial.map;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,8 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
@@ -24,14 +23,14 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
     private LatLngBounds.Builder builder = new LatLngBounds.Builder();
 
     public static FragmentMap newInstance() {
-        
+
         Bundle args = new Bundle();
-        
+
         FragmentMap fragment = new FragmentMap();
         fragment.setArguments(args);
         return fragment;
     }
-    
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,7 +39,8 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -57,9 +57,9 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
         */
 
         Marker marker1 = googleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(40.70686417491799, -74.01572942733765))
-                                .title("First Marker")
-                                .snippet("First Snippet"));
+                .position(new LatLng(40.70686417491799, -74.01572942733765))
+                .title("First Marker")
+                .snippet("First Snippet"));
 
         Marker marker2 = googleMap.addMarker(new MarkerOptions()
                 .position(new LatLng(40.748963847316034, -73.96807193756104))
@@ -84,7 +84,7 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
         getActivity().findViewById(android.R.id.content).post(new Runnable() {
             @Override
             public void run() {
-               CameraUpdate allMarkers = CameraUpdateFactory.newLatLngBounds(builder.build(), 32);
+                CameraUpdate allMarkers = CameraUpdateFactory.newLatLngBounds(builder.build(), 32);
                 googleMap.moveCamera(allMarkers);
             }
         });

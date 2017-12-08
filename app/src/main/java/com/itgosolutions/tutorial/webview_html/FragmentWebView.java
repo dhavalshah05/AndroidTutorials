@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 
 import com.itgosolutions.tutorial.R;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 
@@ -70,17 +67,17 @@ public class FragmentWebView extends Fragment {
         @Override
         protected String doInBackground(Void... voids) {
 
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder()
-                    .url(mURL)
-                    .build();
-
-            try {
-                Response response = client.newCall(request).execute();
-                return response.body().string();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            OkHttpClient client = new OkHttpClient();
+//            Request request = new Request.Builder()
+//                    .url(mURL)
+//                    .build();
+//
+//            try {
+//                Response response = client.newCall(request).execute();
+//                return response.body().string();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             return null;
         }
