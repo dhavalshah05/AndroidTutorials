@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.itgosolutions.tutorial.google_login.ActivityGoogleLogin;
+import com.itgosolutions.tutorial.image_upload.FragmentImageUpload;
 import com.itgosolutions.tutorial.map.FragmentMap;
 import com.itgosolutions.tutorial.rxjava.FragmentRxJava;
 import com.itgosolutions.tutorial.webview_html.FragmentWebView;
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_rx_java:
                         fragment = FragmentRxJava.newInstance();
+                        addFragment(R.id.activity_main_content_frame, fragment);
+                        break;
+                    case R.id.nav_image_upload:
+                        fragment = FragmentImageUpload.newInstance();
                         addFragment(R.id.activity_main_content_frame, fragment);
                         break;
 //                    default:

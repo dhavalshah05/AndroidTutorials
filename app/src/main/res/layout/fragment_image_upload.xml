@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itgosolutions.tutorial.image_upload.FragmentImageUpload">
+
+    <ImageView
+        android:id="@+id/fragment_image_upload_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/fragment_image_upload_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_image_upload_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        style="@style/AppTextMediumLight"
+        android:text="FileName" />
+
+    <Button
+        android:id="@+id/fragment_image_upload_btn_choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_below="@+id/fragment_image_upload_tv_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_outline"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Choose Image" />
+
+    <Button
+        android:id="@+id/fragment_image_upload_btn_upload_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_image_upload_btn_choose_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_outline"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAllCaps="false"
+        android:text="Upload Image" />
+
+    <ProgressBar
+        android:id="@+id/fragment_image_upload_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_image_upload_btn_upload_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+
+</RelativeLayout>

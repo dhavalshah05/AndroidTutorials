@@ -25,6 +25,11 @@
             android:icon="@drawable/ic_home"
             android:title="RxJava" />
 
+        <item
+            android:id="@+id/nav_image_upload"
+            android:icon="@drawable/ic_home"
+            android:title="Image Upload" />
+
     </group>
 
 </menu>
