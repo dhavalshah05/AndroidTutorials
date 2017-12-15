@@ -11,4 +11,11 @@
 
     <color name="divider">#BDBDBD</color>
     <color name="transparent">#00FFFFFF</color>
+
+    <color name="loginScreenBase">#F5F6F7</color>
+    <color name="loginScreenTextPrimary">#5B5A5A</color>
+    <color name="loginScreenTextSecondary">#979899</color>
+    <color name="loginScreenTextExtra">#FF7260</color>
+    <color name="loginScreenButtonBackground">#129793</color>
+    <color name="loginTextFieldBorder">#CFD0D1</color>
 </resources>
