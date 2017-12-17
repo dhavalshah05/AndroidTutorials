@@ -16,6 +16,28 @@
         <item name="android:fontFamily">@font/roboto_light</item>
     </style>
 
+    <style name="AppEditTextBordered">
+        <item name="android:background">@drawable/bordered_edit_text</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:textColor">@color/loginScreenTextSecondary</item>
+        <item name="android:textColorHint">@color/loginScreenTextSecondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppEditTextBorderedTop" parent="AppEditTextBordered">
+        <item name="android:background">@drawable/signin_textfield_background_top</item>
+    </style>
+
+    <style name="AppEditTextBorderedBottom" parent="AppEditTextBordered">
+        <item name="android:background">@drawable/signin_textfield_background_bottom</item>
+    </style>
+
+    <style name="AppButtonRounded">
+        <item name="android:background">@drawable/signin_button_background</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">#fff</item>
+    </style>
 
 
 </resources>
