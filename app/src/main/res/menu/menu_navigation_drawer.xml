@@ -30,6 +30,11 @@
             android:icon="@drawable/ic_home"
             android:title="Image Upload" />
 
+        <item
+            android:id="@+id/nav_load_contacts"
+            android:icon="@drawable/ic_home"
+            android:title="Contacts" />
+
     </group>
 
 </menu>
